@@ -1,0 +1,32 @@
+{
+	"compilerOptions": {
+		"moduleResolution": "node",
+		"target": "es2017",
+		"declaration": true,
+		"module": "CommonJS",
+		"outDir": "dist",
+		"allowJs": true,
+		"allowSyntheticDefaultImports": true,
+		"esModuleInterop": true,
+		"noImplicitAny": false,
+		"strict": true,
+		"strictNullChecks": false,
+		"skipLibCheck": true,
+		"baseUrl": "./src",
+		"sourceMap": true,
+		"paths": {
+			"src/*": ["*"]
+		},
+		"plugins": [
+			{
+				"transform": "typescript-transform-paths"
+			},
+			{
+				"transform": "typescript-transform-paths",
+				"afterDeclarations": true
+			}
+		]
+	},
+	"include": ["src"],
+	"exclude": ["src/**/*.spec.ts"]
+}
