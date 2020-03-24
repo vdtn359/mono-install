@@ -7,6 +7,34 @@ import { read, readJson, writeJson } from 'src/lib/files';
 import { getOptions } from 'src/lib/args';
 import cpy from 'cpy';
 import { DEPENDENCY_TYPES } from 'src/lib/engines/constants';
+import yargs from 'yargs';
+import { ENGINE } from 'src/lib/engines/engine';
+
+yargs
+	.usage('$0 [args] -- [install args]')
+	.option('install-dir', {
+		alias: 'i',
+		type: 'string',
+		description: 'The installation directory',
+	})
+	.option('package-json', {
+		alias: 'p',
+		type: 'string',
+		description: 'package.json location',
+	})
+	.option('package-lock', {
+		alias: 'l',
+		type: 'string',
+		description: 'Lock file (package-lock.json, pnpm-lock.yaml) location',
+	})
+	.option('engine', {
+		alias: 'e',
+		default: ENGINE.npm,
+		type: 'string',
+		choices: [ENGINE.npm, ENGINE.pnpm],
+		description: 'Engine to use',
+	})
+	.strict();
 
 const fsExtra = require('fs-extra');
 
