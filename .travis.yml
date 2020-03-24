@@ -12,4 +12,6 @@ jobs:
                 - npm run build
         -   stage: deploy
             if: branch = master
-            script: npm run semantic-release
+            script:
+                - npm config set access public
+                - npm run semantic-release
