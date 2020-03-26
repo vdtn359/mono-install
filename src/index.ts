@@ -92,7 +92,6 @@ async function ensurePackageJsonFiles() {
 		}
 		engine.cleanPackageLock(destinationPackageLockPath);
 	}
-	console.log(sourcePackageJsonPath);
 	if (!fs.existsSync(sourcePackageJsonPath)) {
 		console.error('package.json does not exist');
 		process.exit(1);

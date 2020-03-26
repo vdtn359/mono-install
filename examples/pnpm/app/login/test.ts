@@ -1,1 +1,3 @@
-console.log('login');
+import { sayHello } from 'sso-services';
+
+console.log(sayHello());

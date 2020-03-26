@@ -1,1 +1,1 @@
-console.log('utils');
+export const hello = 'Hello';

@@ -2,6 +2,8 @@
   "compilerOptions": {
     "incremental": true,
   	"skipLibCheck": true,
+  	"moduleResolution": "node",
+  	"module": "commonjs",
     "target": "es2015",
     "lib": ["dom", "esnext"]
   }
