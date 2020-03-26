@@ -1,6 +1,6 @@
 ## mono-install
 
-![CI Build](https://travis-ci.org/vdtn359/mono-install.svg?branch=master) ![Version Badge](https://badge.fury.io/js/@vdtn359/mono-install.svg)
+![CI Build](https://travis-ci.org/vdtn359/mono-install.svg?branch=master) [![npm version](https://badge.fury.io/js/%40vdtn359%2Fmono-install.svg)](https://badge.fury.io/js/%40vdtn359%2Fmono-install)
 
 #### Overview
 A package that will resolve local dependencies in a package.json and install them correctly without the need of publishing the local dependencies to npm. This will help reduce the complexity when dealing with monorepo application deployment.
