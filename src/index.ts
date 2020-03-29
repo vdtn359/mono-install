@@ -189,7 +189,9 @@ async function prepareTarFile({
 	fsExtra.mkdirpSync(newPath);
 	engine.cleanLocalDependencies(dependencyJsonPath);
 
-	const tarFile = `${dependency}-${dependencyJson.version}.tgz`;
+	const tarFile = `${standardizePackageName(dependency)}-${
+		dependencyJson.version
+	}.tgz`;
 	undoManager.add(new Remove(path.resolve(dependencyPath, tarFile)));
 	execSync('npm pack', {
 		cwd: dependencyPath,
@@ -201,4 +203,8 @@ async function prepareTarFile({
 	});
 
 	return tarLocation;
+}
+
+function standardizePackageName(name) {
+	return name.replace(/@/g, '').replace(/\//g, '-');
 }
