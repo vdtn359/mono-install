@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/vdtn359/mono-install/compare/v1.0.0...v1.0.1) (2020-03-26)
+
+
+### Bug Fixes
+
+* **examples:** add more code to the examples ([63a6e1e](https://github.com/vdtn359/mono-install/commit/63a6e1e8649129820a8d3c3c78d66d72deeff767))
+
 # 1.0.0 (2020-03-24)
 
 
