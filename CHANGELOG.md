@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/vdtn359/mono-install/compare/v1.0.1...v1.0.2) (2020-03-29)
+
+
+### Bug Fixes
+
+* **package:** fix package name with scope ([1ee635f](https://github.com/vdtn359/mono-install/commit/1ee635fe79893ee71b8d05dc2c57f7e6d6cc5b48))
+
 ## [1.0.1](https://github.com/vdtn359/mono-install/compare/v1.0.0...v1.0.1) (2020-03-26)
 
 
