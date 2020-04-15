@@ -2,6 +2,7 @@ import { DepGraph } from 'dependency-graph';
 
 export type DependencyNode = {
 	path: string;
+	version: string;
 	type?: string;
 };
 

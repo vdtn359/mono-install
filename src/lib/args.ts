@@ -33,6 +33,8 @@ export function getOptions() {
 		path.resolve(installDirectory, engine.packageLock)
 	);
 	return {
+		resolve: !!args.resolve,
+		dryRun: !!args.dryRun,
 		installArgs,
 		installDirectory,
 		engineType,

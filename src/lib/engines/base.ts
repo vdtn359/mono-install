@@ -14,22 +14,28 @@ export abstract class BaseEngine implements Engine {
 		const packageName = packageJson.name;
 		graph.addNode(packageName, {
 			path: packageJsonPath,
+			version: packageJson.version,
 		});
 		DEPENDENCY_TYPES.forEach(dependencyType => {
 			const dependencies = this.getDependenciesOfType(
 				packageJsonPath,
 				dependencyType
 			);
-			for (const [[a, aPath], [b, bPath]] of dependencies) {
+			for (const [
+				[a, { path: aPath, version: aVersion }],
+				[b, { path: bPath, version: bVersion }],
+			] of dependencies) {
 				if (!graph.hasNode(a)) {
 					graph.addNode(a, {
 						path: aPath,
+						version: aVersion,
 						type: dependencyType,
 					});
 				}
 				if (!graph.hasNode(b)) {
 					graph.addNode(b, {
 						path: bPath,
+						version: bVersion,
 						type: dependencyType,
 					});
 				}
@@ -49,19 +55,32 @@ export abstract class BaseEngine implements Engine {
 		const name = packageJson.name;
 		for (const dependency of Object.keys(dependencies)) {
 			const localPath = dependencies[dependency];
-			const dependencyPackageJson = path.resolve(
+			const dependencyPackageJsonPath = path.resolve(
 				localPath,
 				'package.json'
 			);
-			if (!fs.existsSync(dependencyPackageJson)) {
+			if (!fs.existsSync(dependencyPackageJsonPath)) {
 				continue;
 			}
+			const dependencyPackageJson = require(dependencyPackageJsonPath);
 			currentDeps.push([
-				[name, packageJsonPath],
-				[dependency, dependencyPackageJson],
+				[
+					name,
+					{
+						path: packageJsonPath,
+						version: packageJson.version,
+					},
+				],
+				[
+					dependency,
+					{
+						path: dependencyPackageJsonPath,
+						version: dependencyPackageJson.version,
+					},
+				],
 			]);
 			this.getDependenciesOfType(
-				dependencyPackageJson,
+				dependencyPackageJsonPath,
 				'dependencies',
 				currentDeps
 			);

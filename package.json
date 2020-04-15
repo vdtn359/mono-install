@@ -2,13 +2,13 @@
 	"name": "@vdtn359/mono-install",
 	"version": "1.0.2",
 	"description": "",
-	"main": "dist/index.js",
+	"main": "dist/cli.js",
 	"types": "dist/index.d.ts",
 	"files": [
 		"dist"
 	],
 	"bin": {
-		"mono-install": "./dist/index.js"
+		"mono-install": "./dist/cli.js"
 	},
 	"repository": {
 		"url": "git@github.com:vdtn359/@vdtn359/mono-install.git"
@@ -36,6 +36,7 @@
 		"@semantic-release/git": "9.0.0",
 		"@semantic-release/npm": "7.0.3",
 		"@semantic-release/release-notes-generator": "9.0.1",
+		"@types/node": "13.11.1",
 		"@types/jest": "25.1.4",
 		"@typescript-eslint/eslint-plugin": "2.22.0",
 		"@typescript-eslint/parser": "2.22.0",
