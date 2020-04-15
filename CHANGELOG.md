@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/vdtn359/mono-install/compare/v1.1.0...v1.1.1) (2020-04-15)
+
+
+### Bug Fixes
+
+* **package:** fix package main path ([466b37d](https://github.com/vdtn359/mono-install/commit/466b37d67b2e5fa49423373bb7ade0c5418916aa))
+
 # [1.1.0](https://github.com/vdtn359/mono-install/compare/v1.0.2...v1.1.0) (2020-04-15)
 
 
