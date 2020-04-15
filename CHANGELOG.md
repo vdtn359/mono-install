@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/vdtn359/mono-install/compare/v1.0.2...v1.1.0) (2020-04-15)
+
+
+### Features
+
+* **install:** add resolve and noInstall arguments ([9d409e0](https://github.com/vdtn359/mono-install/commit/9d409e08fa90eab7eaf2e7f22fd114cf6f9ec75b))
+
 ## [1.0.2](https://github.com/vdtn359/mono-install/compare/v1.0.1...v1.0.2) (2020-03-29)
 
 
