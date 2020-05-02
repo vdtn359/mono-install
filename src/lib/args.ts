@@ -1,8 +1,11 @@
 import yargs from 'yargs';
-import { Engine, ENGINE } from 'src/lib/engines/engine';
 import path from 'path';
-import { NpmEngine } from 'src/lib/engines/npm';
-import { PnpmEngine } from 'src/lib/engines/pnpm';
+import {
+	NpmEngine,
+	PnpmEngine,
+	ENGINE,
+	Engine,
+} from '@vdtn359/package-manager-utils';
 
 const engineMap: Record<ENGINE, Engine> = {
 	[ENGINE.npm]: new NpmEngine(),

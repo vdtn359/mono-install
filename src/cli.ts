@@ -6,9 +6,8 @@ import { FileContent, Remove, UndoManager } from 'src/lib/undo';
 import { read, readJson, writeJson } from 'src/lib/files';
 import { getOptions } from 'src/lib/args';
 import cpy from 'cpy';
-import { DEPENDENCY_TYPES } from 'src/lib/engines/constants';
 import yargs from 'yargs';
-import { ENGINE } from 'src/lib/engines/engine';
+import { DEPENDENCY_TYPES, ENGINE } from '@vdtn359/package-manager-utils';
 
 yargs
 	.usage('$0 [args] -- [install args]')
@@ -111,7 +110,10 @@ async function ensurePackageJsonFiles() {
 		process.exit(1);
 	}
 	const packagePath = path.dirname(sourcePackageJsonPath);
-	if (sourcePackageJsonPath === destinationPackageJsonPath) {
+	if (
+		sourcePackageJsonPath === destinationPackageJsonPath &&
+		!(dryRun && resolve)
+	) {
 		undoManager.add(new FileContent(sourcePackageJsonPath));
 	}
 	if (packagePath !== installDirectory) {

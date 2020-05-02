@@ -78,13 +78,10 @@
 		}
 	},
 	"dependencies": {
+		"@vdtn359/package-manager-utils": "1.0.2",
 		"cpy": "8.0.0",
-		"dependency-graph": "0.9.0",
 		"find-up": "4.1.0",
 		"fs-extra": "8.1.0",
-		"fast-glob": "3.2.2",
-		"is-installed": "^2.0.1",
-		"yaml": "1.8.3",
 		"yargs": "15.3.1"
 	}
 }
