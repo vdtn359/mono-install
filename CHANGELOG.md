@@ -1,3 +1,10 @@
+## [1.1.2](https://github.com/vdtn359/mono-install/compare/v1.1.1...v1.1.2) (2020-05-02)
+
+
+### Bug Fixes
+
+* **cli:** dont reset package json content in dry run mode ([fe4c4f3](https://github.com/vdtn359/mono-install/commit/fe4c4f3527e97b077ec6a4d314099c5de0abc611))
+
 ## [1.1.1](https://github.com/vdtn359/mono-install/compare/v1.1.0...v1.1.1) (2020-04-15)
 
 
